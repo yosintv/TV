@@ -1,0 +1,19 @@
+<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@clappr/hlsjs-playback@1.0.1/dist/hlsjs-playback.min.js"></script>
+<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+<div id="player" style="height: 100%; width: 100%;"></div>
+</head>  
+<body> 
+<script>
+        var player = new Clappr.Player({
+            source: 'https://tvs2.aynaott.com/Ptvsports/index.m3u8?hdnts=st=1698819952~exp=1698863152~acl=/*~data=45.61.146.183-WEB~hmac=ec8d6faa21dfc791297a2b2ba0b65bc9405da015be2d0d93d47332443985f6bc',
+            width: '100%',
+            height: '100%',
+            autoPlay: true,
+            plugins: [HlsjsPlayback, LevelSelector],
+            mimeType: "application/x-mpegURL",
+            mediacontrol: { seekbar: "#ff0000", buttons: "#eee" },
+            parentId: "#player",
+        });
+    </script>
