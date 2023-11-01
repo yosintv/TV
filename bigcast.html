@@ -2,22 +2,20 @@
 <html>
 <head>
     <style>
-        
- body {
+        body {
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 500px;
+            height: 100vh;
         }
 
-
-        
         .iframe-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio (change as needed) */
             width: 100%;
+            max-width: 800px; /* You can adjust the maximum width as needed */
         }
 
         iframe {
@@ -32,7 +30,7 @@
 </head>
 <body>
     <div class="iframe-container">
-        <iframe id="video-frame" src=""></iframe>
+        <iframe id="video-frame" src="" style="border: 0px #ffffff none;" name="iframe" scrolling="no" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <script>
