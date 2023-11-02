@@ -1,0 +1,90 @@
+<script src="//content.jwplatform.com/libraries/IDzF9Zmk.js"></script>
+  <script type="text/javascript">
+    jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';
+  </script>
+  <style>
+    #container {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: #fff;
+      overflow: hidden;
+    }
+    #iframe, #jwPlayer {
+      height: 100vh !important;
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      position: absolute;
+      text-align: center;
+    }
+    video {
+      outline: 0;
+    }
+    #text {
+      position: fixed;
+      border: 0;
+      left: 0;
+      width: 100%;
+      color: #fff;
+      bottom: 50px;
+      text-align: center;
+      font-family: tahoma;
+      font-size: 20px;
+      z-index: 9999;
+    }
+  </style>
+    <iframe id="iframe" allowfullscreen="allowfullscreen" allowtransparency="true" frameborder="0" height="100%" marginheight="0" marginwidth="0" scrolling="no"  src="" width="100%"></iframe>
+    <div id="jwPlayer"></div>
+    <div id="text">www.yosin-tv.net</div>
+  <script>
+    // Get the `src` parameter from the URL.
+    const urlParams = new URLSearchParams(window.location.search);
+    const srcParam = urlParams.get('src');
+    const videoUrl = urlParams.get('videoUrl');
+    
+    if (srcParam) {
+      // Show the iframe player
+      document.getElementById('iframe').src = srcParam;
+      document.getElementById('jwPlayer').style.display = 'none';
+    } else if (videoUrl) {
+      // Show the JW Player
+      jwplayer("jwPlayer").setup({
+        file: videoUrl,
+        autostart: 'true',
+        image: 'https://blogger.googleusercontent.com/img/a/AVvXsEgZrjtPw3W7z5hqHYvHEDusXYI2bZL_N8nJVkmt_g6mb9hY9skCrFXrAdK7LIQVbAsNq3fIl1vShni5FPJeqBE5JySTH3w_CdF22DcFyDtpGcaj9je-I8xJxRfu0g-Vj98L_jBEyHSWyY7EBQXglMLU0vWiMbIZ0mIWS8Mbc_rVwUqDehalZp5YPlnjlR0=s100',
+        primary: 'html5',
+        hlshtml: 'true',
+        aspectratio: '16:9',
+        repeat: 'true',
+        setFullscreen: true,
+        controls: true,
+        showCode: true,
+        responsive: true,
+        abouttext: "Tutorial To",
+        aboutlink: "https://www.yosin-tv.net/",
+        logo: {
+          file: " https://blogger.googleusercontent.com/img/a/AVvXsEgZrjtPw3W7z5hqHYvHEDusXYI2bZL_N8nJVkmt_g6mb9hY9skCrFXrAdK7LIQVbAsNq3fIl1vShni5FPJeqBE5JySTH3w_CdF22DcFyDtpGcaj9je-I8xJxRfu0g-Vj98L_jBEyHSWyY7EBQXglMLU0vWiMbIZ0mIWS8Mbc_rVwUqDehalZp5YPlnjlR0=s100 ",
+          link: "https://www.yosin-tv.net/",
+          position: "top-right",
+          margin: "25",
+        },
+        skin: {
+          name: "glow",
+          active: "red",
+          inactive: "",
+          background: "",
+        }
+      });
+      document.getElementById('iframe').style.display = 'none';
+    }
+  </script></div>
+<script type='text/javascript'>
